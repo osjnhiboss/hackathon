@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlockDAG Predictions - Decentralized Prediction Market</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <div class="logo-icon">BD</div>
+                    <div class="logo-text">
+                        <h1>BlockDAG Predictions</h1>
+                        <p>Decentralized Prediction Market</p>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="nav">
+                    <button class="nav-btn active">
+                        <span class="icon">🏠</span>
+                        Markets
+                    </button>
+                    <button class="nav-btn">
+                        <span class="icon">💼</span>
+                        Portfolio
+                    </button>
+                    <button class="nav-btn" id="create-market-btn">
+                        <span class="icon">➕</span>
+                        Create Market
+                    </button>
+                </nav>
+
+                <!-- Right side -->
+                <div class="header-right">
+                    <!-- Network Status -->
+                    <div class="network-status">
+                        <div class="status-dot"></div>
+                        <span>BlockDAG Network</span>
+                    </div>
+
+                    <!-- Connect Wallet -->
+                    <button class="connect-wallet-btn" id="connect-wallet-btn">
+                        <span class="icon">💳</span>
+                        Connect Wallet
+                    </button>
+                </div>
+
+                <!-- Mobile menu toggle -->
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Predict the Future on
+                    <span class="gradient-text">BlockDAG</span>
+                </h1>
+                
+                <p class="hero-description">
+                    The world's first decentralized prediction market built on BlockDAG's revolutionary 
+                    technology. Trade on outcomes, earn rewards, and shape the future of prediction markets.
+                </p>
+
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" id="hero-create-market">Create Market</button>
+                    <button class="btn btn-outline" id="learn-more-btn">Learn More</button>
+                </div>
+
+                <div class="platform-stats">
+                    <div class="stat">
+                        <div class="stat-value" id="total-volume-stat">$2.4M+</div>
+                        <div class="stat-label">Total Volume Traded</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value" id="active-traders-stat">15,000+</div>
+                        <div class="stat-label">Active Traders</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value" id="uptime-stat">95%</div>
+                        <div class="stat-label">Uptime Guarantee</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Markets Dashboard -->
+    <section class="dashboard">
+        <div class="container">
+            <div class="dashboard-cards">
+                <div class="dashboard-card featured">
+                    <div class="card-header">
+                        <span class="icon">📈</span>
+                        <span class="label">Total Volume</span>
+                    </div>
+                    <div class="card-value" id="dashboard-total-volume">$1,152,600</div>
+                    <div class="card-subtitle">Across all markets</div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="card-label">Active Markets</div>
+                    <div class="card-value" id="dashboard-active-markets">5</div>
+                    <div class="card-subtitle">Currently trading</div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="card-label">Total Participants</div>
+                    <div class="card-value" id="dashboard-participants">27,095</div>
+                    <div class="card-subtitle">Unique traders</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Filters -->
+    <section class="filters">
+        <div class="container">
+            <div class="filters-content">
+                <div class="search-container">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="search-input" placeholder="Search markets..." class="search-input">
+                </div>
+
+                <div class="filter-controls">
+                    <select id="category-filter" class="filter-select">
+                        <option value="">All Categories</option>
+                        <option value="Crypto">Crypto</option>
+                        <option value="Sports">Sports</option>
+                        <option value="Technology">Technology</option>
+                        <option value="Politics">Politics</option>
+                    </select>
+
+                    <select id="status-filter" class="filter-select">
+                        <option value="">All Status</option>
+                        <option value="Active">Active</option>
+                        <option value="Resolved">Resolved</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="results-count">
+                <p id="results-text">Showing 6 of 6 markets</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Markets Grid -->
+    <section class="markets">
+        <div class="container">
+            <div class="markets-grid" id="markets-grid">
+                <!-- Market cards will be dynamically generated here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon small">BD</div>
+                        <span>BlockDAG Predictions</span>
+                    </div>
+                    <p>Decentralized prediction markets powered by BlockDAG technology.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Markets</h4>
+                    <ul>
+                        <li><a href="#">Browse Markets</a></li>
+                        <li><a href="#">Create Market</a></li>
+                        <li><a href="#">Market Rules</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="#">Discord</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Telegram</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>Manage cookies or opt out</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
