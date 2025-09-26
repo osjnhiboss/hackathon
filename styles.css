@@ -624,7 +624,7 @@ body {
     border-radius: 0.375rem;
     font-weight: 500;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background 0.3s;
 }
 
 .trade-btn:hover {
@@ -789,5 +789,748 @@ body {
     .market-card-footer {
         padding: 1rem;
         padding-top: 0;
+    }
+}
+
+
+/* Portfolio Page Styles */
+.portfolio-page {
+    min-height: 100vh;
+    background: #f8fafc;
+}
+
+/* Portfolio Header */
+.portfolio-header {
+    padding: 2rem 0;
+    background: white;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.portfolio-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+.portfolio-subtitle {
+    color: #64748b;
+    font-size: 1rem;
+}
+
+/* Portfolio Statistics */
+.portfolio-stats {
+    padding: 2rem 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    transition: box-shadow 0.2s;
+}
+
+.stat-card:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card.success {
+    border-left: 4px solid #22c55e;
+}
+
+.stat-icon {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    background: #f1f5f9;
+    border-radius: 0.5rem;
+    flex-shrink: 0;
+}
+
+.stat-content {
+    flex: 1;
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 0.25rem;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.25rem;
+}
+
+.stat-gain {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.stat-gain.positive {
+    color: #16a34a;
+}
+
+.stat-gain.negative {
+    color: #dc2626;
+}
+
+.stat-subtitle {
+    font-size: 0.875rem;
+    color: #64748b;
+}
+
+/* Predictions Section */
+.predictions-section {
+    padding: 2rem 0;
+}
+
+/* Tab Navigation */
+.tab-navigation {
+    display: flex;
+    background: #f1f5f9;
+    border-radius: 0.5rem;
+    padding: 0.25rem;
+    margin-bottom: 2rem;
+    width: fit-content;
+}
+
+.tab-btn {
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    border: none;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tab-btn.active {
+    background: white;
+    color: #1e293b;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.tab-btn:hover:not(.active) {
+    color: #1e293b;
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Table Styles */
+.table-container {
+    background: white;
+    border-radius: 0.75rem;
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+}
+
+.predictions-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.predictions-table th {
+    background: #f8fafc;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: #374151;
+    font-size: 0.875rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.predictions-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #f3f4f6;
+    font-size: 0.875rem;
+}
+
+.predictions-table tbody tr:hover {
+    background: #f9fafb;
+}
+
+.predictions-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Position Badges */
+.position-badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.position-badge.yes {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.position-badge.no {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* Outcome Badges */
+.outcome-badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.outcome-badge.won {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.outcome-badge.lost {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* P&L Styling */
+.pnl-positive {
+    color: #16a34a;
+    font-weight: 500;
+}
+
+.pnl-negative {
+    color: #dc2626;
+    font-weight: 500;
+}
+
+.pnl-neutral {
+    color: #64748b;
+    font-weight: 500;
+}
+
+/* Market Question */
+.market-question {
+    font-weight: 500;
+    color: #1e293b;
+    max-width: 300px;
+    line-height: 1.4;
+}
+
+/* View Market Button */
+.view-market-btn {
+    padding: 0.5rem 1rem;
+    background: #f1f5f9;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.view-market-btn:hover {
+    background: #e2e8f0;
+    color: #334155;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tab-navigation {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .table-container {
+        overflow-x: auto;
+    }
+    
+    .predictions-table {
+        min-width: 800px;
+    }
+    
+    .predictions-table th,
+    .predictions-table td {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.8rem;
+    }
+    
+    .market-question {
+        max-width: 200px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-header {
+        padding: 1rem 0;
+    }
+    
+    .portfolio-title {
+        font-size: 1.5rem;
+    }
+    
+    .stat-card {
+        padding: 1rem;
+    }
+    
+    .stat-value {
+        font-size: 1.25rem;
+    }
+}
+
+/* Create Market Page */
+.create-market-page {
+    min-height: 100vh;
+    background: #f8fafc;
+}
+
+/* Create Market Header */
+.create-market-header {
+    padding: 2rem 0;
+    background: white;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.create-market-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+.create-market-subtitle {
+    color: #64748b;
+    font-size: 1rem;
+    max-width: 600px;
+}
+
+/* Create Market Content */
+.create-market-content {
+    padding: 2rem 0;
+}
+
+.create-market-grid {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 2rem;
+    align-items: start;
+}
+
+/* Market Details Card */
+.market-details-card,
+.market-preview-card {
+    background: white;
+    border-radius: 0.75rem;
+    border: 1px solid #e2e8f0;
+    padding: 2rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 1.5rem;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-input.small {
+    max-width: 120px;
+}
+
+.character-count {
+    font-size: 0.75rem;
+    color: #64748b;
+    margin-top: 0.25rem;
+}
+
+/* Form Row */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+/* Tags */
+.tags-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    flex-wrap: wrap;
+    min-height: 42px;
+}
+
+.tags-list {
+    display: flex;
+    gap: 0.25rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: #e0e7ff;
+    color: #3730a3;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.tag-remove {
+    background: none;
+    border: none;
+    color: #6366f1;
+    cursor: pointer;
+    font-size: 0.875rem;
+    padding: 0;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tag-input {
+    border: none;
+    outline: none;
+    flex: 1;
+    min-width: 80px;
+    padding: 0.25rem;
+}
+
+.add-tag-btn {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.add-tag-btn:hover {
+    background: #2563eb;
+}
+
+/* Market Parameters */
+.market-parameters {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.parameters-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 1rem;
+}
+
+.parameters-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.parameter-item label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+}
+
+.parameter-help {
+    font-size: 0.75rem;
+    color: #64748b;
+    margin-top: 0.25rem;
+}
+
+/* Market Preview */
+.preview-placeholder {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #64748b;
+}
+
+.preview-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.preview-market-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.preview-badges {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.preview-badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.preview-status {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.preview-question {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+.preview-description {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 1rem;
+}
+
+.preview-voting {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.preview-vote-option {
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    border: 1px solid;
+}
+
+.preview-vote-option.yes {
+    background: #f0fdf4;
+    border-color: #bbf7d0;
+}
+
+.preview-vote-option.no {
+    background: #fef2f2;
+    border-color: #fecaca;
+}
+
+.vote-header {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.vote-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.preview-vote-option.yes .vote-label {
+    color: #166534;
+}
+
+.preview-vote-option.no .vote-label {
+    color: #991b1b;
+}
+
+.vote-percentage {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.preview-vote-option.yes .vote-percentage {
+    color: #166534;
+}
+
+.preview-vote-option.no .vote-percentage {
+    color: #991b1b;
+}
+
+.vote-price {
+    font-size: 0.75rem;
+}
+
+.preview-vote-option.yes .vote-price {
+    color: #16a34a;
+}
+
+.preview-vote-option.no .vote-price {
+    color: #dc2626;
+}
+
+/* Creation Cost */
+.creation-cost {
+    background: #f8fafc;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.creation-cost h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.75rem;
+}
+
+.cost-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.cost-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+}
+
+.cost-item.total {
+    padding-top: 0.5rem;
+    border-top: 1px solid #e5e7eb;
+    margin-top: 0.5rem;
+}
+
+.cost-value {
+    color: #1e293b;
+    font-weight: 500;
+}
+
+/* Create Button */
+.create-market-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background: #6b7280;
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-bottom: 1rem;
+}
+
+.create-market-btn:hover:not(:disabled) {
+    background: #4b5563;
+}
+
+.create-market-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.create-market-btn.ready {
+    background: #3b82f6;
+}
+
+.create-market-btn.ready:hover {
+    background: #2563eb;
+}
+
+.terms-text {
+    font-size: 0.75rem;
+    color: #64748b;
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .create-market-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .parameters-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .market-details-card,
+    .market-preview-card {
+        padding: 1.5rem;
+    }
+    
+    .create-market-title {
+        font-size: 1.5rem;
     }
 }
